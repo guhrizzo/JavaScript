@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Graus</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body{
+            background-color: #9097c0 ;
+            color: #fff;
+        }
+
+        h1, p, #res{
+            text-align: center;
+        }
+
+        #maincontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main{
+            background-color: #133e99;
+            width: 50vw;
+            height: 30vh;
+            border-radius: 20px;
+            margin: 5px;
+            box-shadow: -3px 0px 20px 0px #141c77a6;
+        }
+
+        h1, p, #container, #res{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <article id="maincontainer">
+        <main>
+            <br>
+            <h1>Conversor de Fahrenheit para Celsius</h1>
+            <p>Coloque a temperatura em  Fahrenheit</p>
+            <div id="container">
+                <input type="number" name="num" id="num">
+                <input type="button" value="Enviar" id="btn">
+            </div>
+            <div id="res">A resposta apareçerá aqui!</div>
+        </main>
+    </article>
+    <script>
+        btn.addEventListener('click', calcular)
+
+        function calcular(){
+            var temp = document.getElementById('num')
+            var celsius = Number((temp.value -32 )*(5/9))
+            var resposta = document.getElementById('res')
+            var int = celsius.toFixed(2)
+            resposta.innerText = `${int}ºC`
+        }
+    </script>
+</body>
+</html>

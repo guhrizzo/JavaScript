@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar de Velocidade</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        body{
+            background-color: rgba(135, 206, 250, 0.534);
+        }
+
+        #txt, #btn{
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" id="txtvel"> KM/H <br>
+    <input type="button" value="Verificar" id="btn" >
+    <div id="resultado"> </div>
+    <script>
+        btn.addEventListener('click', calcular)
+        var txtv = document.getElementById('txtvel')
+
+        function calcular() {
+            var resultado = document.getElementById('resultado')
+            var vel = Number(txtv.value)
+            resultado.innerHTML = `Sua velocidade atual é de ${vel} Km/h`
+            if (vel > 60) {
+                resultado.innerHTML += '<br><strong>Você foi multado por exceso de velocidade! </strong>'
+            }
+        }
+    </script>
+</body>
+</html>

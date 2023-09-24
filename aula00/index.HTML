@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro desafio JS</h1>
+    <p>Esse é um texto da minha pág desafio</p>
+</body>
+<script>
+    let listacores = ['yellow', 'blue' , 'grey', 'red', 'pink']
+    
+
+    function trocarcores(){
+        document.body.style.backgroundColor = listacores[Math.floor(5 * Math.random())]
+    }
+    setInterval(trocarcores, 1000)
+</script>
+</html>

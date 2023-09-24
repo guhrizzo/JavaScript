@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: #093A3E;
+        }
+
+        div#container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+        h1, p, #peso, #altura, #res {
+            margin: 5px;
+        }
+
+        h1, p, #res {
+            color: aliceblue;
+        }
+
+        main{
+            background-color: #3AAFB9;
+            text-align: center;
+            width: 40vw;
+            height: 30vh;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px #3aaeb9a4;
+        }
+
+        .button {
+            background-color: #ffffff00;
+            color: #fff;
+            width: 8.5em;
+            height: 2.9em;
+            border: #3654ff 0.2em solid;
+            border-radius: 11px;
+            text-align: right;
+            transition: all 0.6s ease;
+        }
+
+        .button:hover {
+            background-color: #3654ff;
+            cursor: pointer;
+        }
+
+        .button svg {
+            width: 1.6em;
+            margin: -0.2em 0.8em 1em;
+            position: absolute;
+            display: flex;
+            transition: all 0.6s ease;
+        }
+
+        .button:hover svg {
+            transform: translateX(5px);
+        }
+
+        .text {
+            margin: 0 1.5em
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <main>
+            <h1>Calcular IMC</h1>
+            <p>Coloque seu peso:</p>
+            <input type="number" name="peso" id="peso">
+            <p>Coloque sua altura em metros:</p>
+            <input type="number" name="altura" id="altura"> <br>
+            <!--<button class="button">
+
+  
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                </svg>
+              
+                
+                <div class="text">
+                  Calcular
+                </div>
+              
+              </button> -->
+              <input type="button" value="Calcular" id="button">    
+            <div id="res">O resultado vai aparecer aqui</div>
+        </main>
+    </div>
+    <script>
+        button.addEventListener('click', calcular)
+
+        function calcular() {
+            var peso = (document.getElementById('peso'))
+            var altura = (document.getElementById('altura'))
+            var resposta = document.getElementById('res')
+            var p = (peso.value)
+            var a = (altura.value)
+            var imc = p / (a**2)
+            var int = imc.toFixed(2)
+            if (imc < 18.5) {
+                resposta.innerText = `Seu IMC é ${int} Você está abaixo do peso`
+            } else if (imc == 0) {
+                resposta.innerText = 'Coloque um valor para vermos seu IMC'
+            } else if (imc < 25) {
+                resposta.innerText = `Seu IMC é ${int} Você está com o peso ideal (parabéns)`
+            } else if (imc < 30) {
+                resposta.innerText = `Seu IMC é ${int} Você está levemente acima do peso`
+            } else if (imc < 35) {
+                resposta.innerText = `Seu IMC é ${int} Você está com Obesidade grau 1`
+            } else if (imc < 40) {
+                resposta.innerText = `Seu IMC é ${int} Você está com Obesidade grau 2 (severa)`
+            }  else {
+                resposta.innerText = `Seu IMC é ${int} Você está com Obesidade grau 3 (mórbida)` 
+        }
+    }
+    </script>
+</body>
+</html>

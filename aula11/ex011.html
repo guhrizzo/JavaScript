@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, input, div, p{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CENSO</h1>
+     <p>Digite abaixo o nome do seu país</p>
+    <input type="text" name="texto" id="texto">
+    <input type="button" value="Enviar" id="btn">
+    <div id="res">Aqui apareçera o resultado!</div>
+    <script>
+        btn.addEventListener('click', conferir)
+
+        function conferir() {
+            var txt = (document.getElementById('texto'))
+            var pais = (txt.value)
+            var resu = document.getElementById('res')
+            if (pais == 'brasil') {
+                resu.innerHTML = "Você é Brasileiro"
+            }else {
+                resu.innerHTML = "Você é Extrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>
