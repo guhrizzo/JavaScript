@@ -1,18 +1,18 @@
 @media (max-width: 475px) {
     #cover{
-        transform: scale(0.9);
+        transform: scale(0.75);
     }
 
     #button_container{
-        transform: scale(0.9);
+        transform: scale(0.75);
     }
 
     #progress_container{
-        transform: scale(0.9);
+        transform: scale(0.75);
     }
 
     #below_cover{
-        transform: scale(0.9);
+        transform: scale(0.75);
     }
 
     div#below_cover{
