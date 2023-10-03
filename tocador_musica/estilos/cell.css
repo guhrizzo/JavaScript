@@ -1,0 +1,25 @@
+@media (max-width: 475px) {
+    #cover{
+        transform: scale(0.9);
+    }
+
+    #button_container{
+        transform: scale(0.9);
+    }
+
+    #progress_container{
+        transform: scale(0.9);
+    }
+
+    #below_cover{
+        transform: scale(0.9);
+    }
+
+    div#below_cover{
+        margin: 1em 0 1em 0;
+    }
+
+    h4{
+        font-size: larger;
+    }
+}

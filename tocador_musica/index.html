@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    
+<div class="music_container">
+    <h4>Playlist Hashtag</h4>
+    <!--<p>Capa do Disco</p>
+    <p>Botão de Like</p>
+    <p>Barra de Progresso</p>
+    <p>Botão de Embaralhar</p>
+    <p>Voltar Música</p>
+    <p>Play / Pause</p>
+    <p>Avançar Música</p>
+    <p>Repetir</p>-->
+    <img alt="Disc Cover." id="cover"> <br>
+    <audio id="audio"></audio>
+    <div id="below_cover">
+        <div id="song_info">
+            <p id="song-name">Nome da Música</p>
+            <p id="band-name" class="ligth_color">Nome da Banda</p>
+        </div>
+        <button class="button ligth_color" id="like"><i class="bi bi-heart"></i></button>
+    </div>
+    <div id="progress_container">
+        <div id="progress_bar">
+            <div id="current_progress"></div>
+        </div>
+        <div id="time-box">
+            <div id="song-time">00:00:00</div>
+            <div id="total-time">00:00:00</div>
+        </div>
+    </div>
+    <div id="button_container">
+        <button id="shuffle" class="button"><i class="bi bi-shuffle"></i></button>
+        <button id="previous" class="button button_navigation"><i class="bi bi-skip-start-fill"></i></button>
+        <button id="play" class="button button_biggest"><i class="bi bi-play-circle-fill"></i></button>
+        <button id="next" class="button button_navigation"><i class="bi bi-skip-end-fill"></i></button>
+        <button id="repeat" class="button"><i class="bi bi-repeat"></i></button>
+    </div>
+</div>
+<footer>
+    <p>&copy;Gustavo Fernandes Rizzo</p>
+</footer>
+<script src="index.js"></script>
+</body>
+</html>
