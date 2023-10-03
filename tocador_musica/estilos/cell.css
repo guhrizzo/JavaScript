@@ -1,4 +1,9 @@
 @media (max-width: 475px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
     #cover{
         transform: scale(0.75);
     }
