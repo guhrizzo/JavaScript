@@ -11,12 +11,10 @@
         overflow-x: hidden;
         overflow-y: hidden;
         min-height: 100vh;
-
-    
     }
 
     #cover{
-        transform: scale(0.85);
+        transform: scale(0.8);
     }
 
     .adjust-mq{
