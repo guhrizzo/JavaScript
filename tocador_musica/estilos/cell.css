@@ -1,33 +1,52 @@
 @media (max-width: 450px) {
 
-    .adjust{
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    .music_container{
         max-width: 100vw;
         overflow-x: hidden;
         overflow-y: hidden;
         min-height: 100vh;
+
+    
     }
 
     #cover{
-        transform: scale(0.75);
+        transform: scale(0.85);
+    }
+
+    .adjust-mq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
 
     #button_container{
-        transform: scale(0.75);
+        transform: scale(0.9);
     }
 
     #progress_container{
-        transform: scale(0.75);
+        transform: scale(0.9);
     }
 
     #below_cover{
-        transform: scale(0.75);
+        transform: scale(0.9);
+
     }
 
-    div#below_cover{
-        margin: 1em 0 1em 0;
+    div.below_cover{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2em 0 1em 0;
     }
 
     h4{
         font-size: larger;
+        margin: 1em 0 1em 0;
     }
 }
